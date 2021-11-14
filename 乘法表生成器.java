@@ -95,7 +95,7 @@ public class test {
                         System.out.println("请输入大于\"0\"的数字" + "\n" + "-------------------------------------");
                     } else if (!((howMany1 < 1 || time1 < 1) || (howMany1 < 1 && time1 < 1))) {
 
-                        int box = 1;
+                        long box = 1l;
                         System.out.println("\n" + "   (1到" + time + ")乘" + howMany + "的乘法表" + "\n"
                                 + "-------------------------------------");
                         do {
