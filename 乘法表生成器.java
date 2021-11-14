@@ -1,3 +1,4 @@
+import java.math.BigInteger;
 import java.util.Scanner;
 
 public class test {
@@ -19,22 +20,24 @@ public class test {
                 if (time.length() > 0) {
                     try {
                         // 如果没有任何错误将会运转Try语句，如果有“NumberFormatException”的错误，将会运行Catch的语句
-                        long howMany1 = Integer.parseInt(howMany);
-                        long time1 = Integer.parseInt(time);
-                        if ((howMany1 < 1 || time1 < 1) || (howMany1 < 1 && time1 < 1)) {
+                        BigInteger howMany1 = BigInteger.valueOf(Integer.parseInt(howMany));
+                        BigInteger time1 = BigInteger.valueOf(Integer.parseInt(time));
+                        if ((howMany1.longValue() < 1 || time1.longValue() < 1)
+                                || (howMany1.longValue() < 1 && time1.longValue() < 1)) {
                             System.out.println("请输入大于\"0\"的数字" + "\n" + "-------------------------------------");
-                        } else if (!((howMany1 < 1 || time1 < 1) || (howMany1 < 1 && time1 < 1))) {
+                        } else if (!((howMany1.longValue() < 1 || time1.longValue() < 1)
+                                || (howMany1.longValue() < 1 && time1.longValue() < 1))) {
 
                             long box = 1l;
                             System.out.println("\n" + "   (1到" + time + ")乘" + howMany + "的乘法表" + "\n"
                                     + "-------------------------------------");
                             do {
 
-                                System.out.println("     " + box + " 乘 " + howMany + " = " + box * howMany1 + "\n"
-                                        + "-------------------------------------");
+                                System.out.println("     " + box + " 乘 " + howMany + " = " + box * howMany1.longValue()
+                                        + "\n" + "-------------------------------------");
                                 box++;
 
-                            } while (box < time1 + 1);
+                            } while (box < time1.longValue() + 1);
                             System.out.println("");
                         }
                     } catch (NumberFormatException a) {
@@ -89,22 +92,24 @@ public class test {
             if (time.length() > 0) {
                 try {
                     // 如果没有任何错误将会运转Try语句，如果有“NumberFormatException”的错误，将会运行Catch的语句
-                    long howMany1 = Integer.parseInt(howMany);
-                    long time1 = Integer.parseInt(time);
-                    if ((howMany1 < 1 || time1 < 1) || (howMany1 < 1 && time1 < 1)) {
+                    BigInteger howMany1 = BigInteger.valueOf(Integer.parseInt(howMany));
+                    BigInteger time1 = BigInteger.valueOf(Integer.parseInt(time));
+                    if ((howMany1.longValue() < 1 || time1.longValue() < 1)
+                            || (howMany1.longValue() < 1 && time1.longValue() < 1)) {
                         System.out.println("请输入大于\"0\"的数字" + "\n" + "-------------------------------------");
-                    } else if (!((howMany1 < 1 || time1 < 1) || (howMany1 < 1 && time1 < 1))) {
+                    } else if (!((howMany1.longValue() < 1 || time1.longValue() < 1)
+                            || (howMany1.longValue() < 1 && time1.longValue() < 1))) {
 
                         long box = 1l;
                         System.out.println("\n" + "   (1到" + time + ")乘" + howMany + "的乘法表" + "\n"
                                 + "-------------------------------------");
                         do {
 
-                            System.out.println("     " + box + " 乘 " + howMany + " = " + box * howMany1 + "\n"
-                                    + "-------------------------------------");
+                            System.out.println("     " + box + " 乘 " + howMany + " = " + box * howMany1.longValue()
+                                    + "\n" + "-------------------------------------");
                             box++;
 
-                        } while (box < time1 + 1);
+                        } while (box < time1.longValue() + 1);
                         System.out.println("");
 
                     }
