@@ -19,13 +19,13 @@ public class test {
                 if (time.length() > 0) {
                     try {
                         // 如果没有任何错误将会运转Try语句，如果有“NumberFormatException”的错误，将会运行Catch的语句
-                        int howMany1 = Integer.parseInt(howMany);
-                        int time1 = Integer.parseInt(time);
+                        long howMany1 = Integer.parseInt(howMany);
+                        long time1 = Integer.parseInt(time);
                         if ((howMany1 < 1 || time1 < 1) || (howMany1 < 1 && time1 < 1)) {
                             System.out.println("请输入大于\"0\"的数字" + "\n" + "-------------------------------------");
                         } else if (!((howMany1 < 1 || time1 < 1) || (howMany1 < 1 && time1 < 1))) {
 
-                            int box = 1;
+                            long box = 1l;
                             System.out.println("\n" + "   (1到" + time + ")乘" + howMany + "的乘法表" + "\n"
                                     + "-------------------------------------");
                             do {
@@ -89,8 +89,8 @@ public class test {
             if (time.length() > 0) {
                 try {
                     // 如果没有任何错误将会运转Try语句，如果有“NumberFormatException”的错误，将会运行Catch的语句
-                    int howMany1 = Integer.parseInt(howMany);
-                    int time1 = Integer.parseInt(time);
+                    long howMany1 = Integer.parseInt(howMany);
+                    long time1 = Integer.parseInt(time);
                     if ((howMany1 < 1 || time1 < 1) || (howMany1 < 1 && time1 < 1)) {
                         System.out.println("请输入大于\"0\"的数字" + "\n" + "-------------------------------------");
                     } else if (!((howMany1 < 1 || time1 < 1) || (howMany1 < 1 && time1 < 1))) {
