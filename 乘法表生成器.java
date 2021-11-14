@@ -24,7 +24,8 @@ public class test {
                         BigInteger time1 = BigInteger.valueOf(Integer.parseInt(time));
                         if ((howMany1.longValue() < 1 || time1.longValue() < 1)
                                 || (howMany1.longValue() < 1 && time1.longValue() < 1)) {
-                            System.out.println("请输入大于\"0\"的数字" + "\n" + "-------------------------------------");
+                            System.out.println("-------------------------------------" + "\n" + "请输入大于\"0\"的数字" + "\n"
+                                    + "-------------------------------------");
                         } else if (!((howMany1.longValue() < 1 || time1.longValue() < 1)
                                 || (howMany1.longValue() < 1 && time1.longValue() < 1))) {
 
@@ -42,10 +43,14 @@ public class test {
                         }
                     } catch (NumberFormatException a) {
                         try {
+                            System.out.println("");
                             int insideHowMany = Integer.parseInt(howMany);
                             System.out.println("\"" + insideHowMany + "\"" + " is a number");
+                            System.out.println("");
                         } catch (NumberFormatException b) {
+                            System.out.println("");
                             System.out.println("\"" + howMany + "\"" + " is not a number");
+                            System.out.println("");
                             d += 1;
                         }
                         try {
@@ -96,7 +101,8 @@ public class test {
                     BigInteger time1 = BigInteger.valueOf(Integer.parseInt(time));
                     if ((howMany1.longValue() < 1 || time1.longValue() < 1)
                             || (howMany1.longValue() < 1 && time1.longValue() < 1)) {
-                        System.out.println("请输入大于\"0\"的数字" + "\n" + "-------------------------------------");
+                        System.out.println("-------------------------------------" + "\n" + "请输入大于\"0\"的数字" + "\n"
+                                + "-------------------------------------");
                     } else if (!((howMany1.longValue() < 1 || time1.longValue() < 1)
                             || (howMany1.longValue() < 1 && time1.longValue() < 1))) {
 
@@ -116,8 +122,10 @@ public class test {
                 } catch (NumberFormatException a) {
                     try {
                         int insideHowMany = Integer.parseInt(howMany);
+                        System.out.println("");
                         System.out.println("\"" + insideHowMany + "\"" + " is a number");
                     } catch (NumberFormatException b) {
+                        System.out.println("");
                         System.out.println("\"" + howMany + "\"" + " is not a number");
                         d += 1;
                     }
