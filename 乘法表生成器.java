@@ -9,6 +9,7 @@ public class test {
     private static boolean goTo = true;
     private static Scanner sc = new Scanner(System.in);
 
+    @SuppressWarnings("finally")
     public static void main(String[] args) {
         while (goTo) {
             d = 0;
@@ -45,48 +46,35 @@ public class test {
                         try {
                             System.out.println("");
                             int insideHowMany = Integer.parseInt(howMany);
-                            System.out.println("\"" + insideHowMany + "\"" + " is a number");
+                            System.out.println("\"" + insideHowMany + "\"" + " 是个数字");
                             System.out.println("");
                         } catch (NumberFormatException b) {
                             System.out.println("");
-                            System.out.println("\"" + howMany + "\"" + " is not a number");
+                            System.out.println("\"" + howMany + "\"" + " 不是数字");
                             System.out.println("");
                             d += 1;
                         }
                         try {
                             int insideTime = Integer.parseInt(time);
-                            System.out.println("\"" + insideTime + "\"" + "is a number" + "\n"
-                                    + "-------------------------------------");
+                            System.out.println(
+                                    "\"" + insideTime + "\"" + "是个数字" + "\n" + "-------------------------------------");
                         } catch (NumberFormatException c) {
-                            System.out.println("\"" + time + "\"" + "is not a number" + "\n"
-                                    + "-------------------------------------");
+                            System.out.println(
+                                    "\"" + time + "\"" + "不是个数字" + "\n" + "-------------------------------------");
                             d += 1;
                         }
-                        if (d == 1) {
-                            System.out.println("The content inside has " + d + " letter" + "\n"
-                                    + "-------------------------------------");
-                        } else if (d > 1) {
-                            System.out.println("The content inside has " + d + " letters" + "\n"
-                                    + "-------------------------------------");
-                        }
+                        System.out.println("此内容有 " + d + " 个不是字母" + "\n" + "-------------------------------------");
                     } finally {
-                        if (i > 1) {
-                            System.out.println("You use this function " + i++ + " times" + "\n"
-                                    + "-------------------------------------");
-                        } else if (i == 1) {
-                            System.out.println(
-                                    "You use this function 1 time" + "\n" + "-------------------------------------");
-                            i++;
-                        }
+                        System.out.println("你用此程序 " + i++ + " 次" + "\n" + "-------------------------------------");
                     }
                 } else if (time.length() == 0) {
-                    System.out.println("Plese enter a number");
+                    System.out.println("请输入数字");
                     goTo = false;
                     continue;
                 }
 
             } else if (howMany.length() == 0) {
-                System.out.println("Plese enter a number");
+                System.out.println("请输入数字");
             }
         }
 
@@ -123,46 +111,32 @@ public class test {
                     try {
                         int insideHowMany = Integer.parseInt(howMany);
                         System.out.println("");
-                        System.out.println("\"" + insideHowMany + "\"" + " is a number");
+                        System.out.println("\"" + insideHowMany + "\"" + " 是数字");
                     } catch (NumberFormatException b) {
                         System.out.println("");
-                        System.out.println("\"" + howMany + "\"" + " is not a number");
+                        System.out.println("\"" + howMany + "\"" + " 不是数字");
                         d += 1;
                     }
                     try {
                         int insideTime = Integer.parseInt(time);
-                        System.out.println("\"" + insideTime + "\"" + "is a number" + "\n"
-                                + "-------------------------------------");
+                        System.out.println(
+                                "\"" + insideTime + "\"" + "是数字" + "\n" + "-------------------------------------");
                     } catch (NumberFormatException c) {
-                        System.out.println("\"" + time + "\"" + "is not a number" + "\n"
-                                + "-------------------------------------");
+                        System.out
+                                .println("\"" + time + "\"" + "不是数字" + "\n" + "-------------------------------------");
                         d += 1;
                     }
-                    if (d == 1) {
-                        System.out.println("The content inside has " + d + " letter" + "\n"
-                                + "-------------------------------------");
-                    } else if (d > 1) {
-                        System.out.println("The content inside has " + d + " letters" + "\n"
-                                + "-------------------------------------");
-                    }
+                    System.out.println("此内容有 " + d + " 个字母" + "\n" + "-------------------------------------");
                 } finally {
-                    if (i > 1) {
-                        System.out.println("You use this function " + i++ + " times" + "\n"
-                                + "-------------------------------------");
-                        goTo = true;
-                        main(null);
-                        break;
-                    } else if (i == 1) {
-                        System.out.println(
-                                "You use this function 1 time" + "\n" + "-------------------------------------");
-                        i++;
-                        goTo = true;
-                        main(null);
-                        break;
-                    }
+
+                    System.out.println("你用了此程序 " + i++ + " 次" + "\n" + "-------------------------------------");
+                    goTo = true;
+                    main(null);
+                    break;
+
                 }
             } else if (time.length() == 0) {
-                System.out.println("Plese enter a number");
+                System.out.println("请输入数字");
             }
         }
     }
