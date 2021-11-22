@@ -20,7 +20,6 @@ public class test {
                 time = sc.nextLine();
                 if (time.length() > 0) {
                     try {
-                        // 如果没有任何错误将会运转Try语句，如果有“NumberFormatException”的错误，将会运行Catch的语句
                         BigInteger howMany1 = BigInteger.valueOf(Integer.parseInt(howMany));
                         BigInteger time1 = BigInteger.valueOf(Integer.parseInt(time));
                         if ((howMany1.longValue() < 1 || time1.longValue() < 1)
@@ -84,7 +83,6 @@ public class test {
             time = sc.nextLine();
             if (time.length() > 0) {
                 try {
-                    // 如果没有任何错误将会运转Try语句，如果有“NumberFormatException”的错误，将会运行Catch的语句
                     BigInteger howMany1 = BigInteger.valueOf(Integer.parseInt(howMany));
                     BigInteger time1 = BigInteger.valueOf(Integer.parseInt(time));
                     if ((howMany1.longValue() < 1 || time1.longValue() < 1)
